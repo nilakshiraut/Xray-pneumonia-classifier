@@ -1,5 +1,4 @@
-<<<<<<< HEAD
+
 python-3.11
-=======
-python-3.11
->>>>>>> 7196cf29f0a47ffda63c0b52b1bd5cce84c1dcb0
+
+
