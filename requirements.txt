@@ -2,8 +2,3 @@ streamlit==1.37.0
 tensorflow==2.20.0
 Pillow==9.0.1
 
-
-
-
-
-

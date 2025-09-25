@@ -72,3 +72,4 @@ if file is not None:
 
         st.success(f"### Result: **{predicted_class}**")
         st.info(f"Confidence: **{final_confidence * 100:.2f}%**")
+
