@@ -53,8 +53,11 @@ st.write("Upload your chest X-ray and let our model assist in detecting Pneumoni
 file = st.file_uploader("Upload a Chest X-ray", type=["jpeg", "jpg", "png"])
 
 if file is not None:
-    # Show uploaded image
-    st.image(file, caption="Uploaded X-ray", use_container_width=True)
+    # Fix for use_column_width warning: Control width using columns
+    col1, col2, col3 = st.columns([1, 4, 1]) 
+    
+    with col2:
+        st.image(file, caption="Uploaded X-ray") 
 
     # Preprocess
     img = Image.open(BytesIO(file.read())).convert('RGB')
@@ -72,4 +75,3 @@ if file is not None:
 
         st.success(f"### Result: **{predicted_class}**")
         st.info(f"Confidence: **{final_confidence * 100:.2f}%**")
-
