@@ -54,7 +54,7 @@ file = st.file_uploader("Upload a Chest X-ray", type=["jpeg", "jpg", "png"])
 
 if file is not None:
     # Show uploaded image
-    st.image(file, caption="Uploaded X-ray", use_container_width=True)
+    st.image(file, caption="Uploaded X-ray", use_column_width=True)
 
     # Preprocess
     img = Image.open(BytesIO(file.read())).convert('RGB')
